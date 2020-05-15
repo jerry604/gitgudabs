@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+#background {
+  position: fixed;
+  z-index: -2;
+}
+
+.slots-container {
+  display: flex;
+  min-width: 960;
+  padding: 2rem;
+  background: #eee;
+  margin-top: 1rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.column__title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.column__slots {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 180;
+  overflow: hidden;
+}
+
+.slots__image-container {
+  position: absolute;
+}
+
+.slots__image {
+  width: 180;
+  height: 180;
+}
+
+#engage {
+  width: 400;
+  height: 400;
+  margin-top: 2rem;
+  background-image: url('./assets/engage.jpeg');
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/**
+ * animations
+ */
+
+@keyframes spin {
+  from { top: 0 }
+  to   { top: -1080px } /** 180 * 6 */
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
